@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f9fb;
+  --foreground: #0b1f3a;
+  --card: #ffffff;
+  --muted: #eef2f7;
+  --primary: #0b1f3a;
+  --accent: #d4a537;
+  --border: rgba(11, 31, 58, 0.08);
+  --shadow: 0 10px 30px rgba(11, 31, 58, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.02em;
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-4 max-w-2xl text-base text-slate-600 sm:text-lg;
+  }
+
+  .card-surface {
+    @apply rounded-[28px] border border-slate-200/70 bg-white shadow-soft;
+  }
+}
